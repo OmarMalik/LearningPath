@@ -10,8 +10,8 @@ class Topic(models.Model):
 
 class Track(models.Model):
     name = models.CharField(max_length=64)
-    up_votes = models.IntegerField()
-    down_votes = models.IntegerField()
+    up_votes = models.IntegerField(default=0)
+    down_votes = models.IntegerField(default=0)
     topic = models.ForeignKey(Topic)
 
     def __unicode__(self):
