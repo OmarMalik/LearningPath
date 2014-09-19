@@ -1,14 +1,7 @@
 from django.contrib import admin
-from site.models import Topic
+from site.models import Topic, Track, Step
 
 
-admin.autodiscover()
-
-
-class TopicAdmin(admin.ModelAdmin):
-    class Meta:
-        model = Topic
-
-admin.site.register(Topic, TopicAdmin)
-
-admin.autodiscover()
+admin.site.register(Topic)
+admin.site.register(Track)
+admin.site.register(Step)
