@@ -5,5 +5,11 @@
 {% block navbar %} {% include 'lpath/navbar.html' %} {% endblock %}
 
 {% block body %}
-    body
+    {% if topics %}
+        {% for topic in topics %}
+            {{ topic.name }}
+        {% endfor %}
+    {% else %}
+        No tracks
+    {% endif %}
 {% endblock %}
